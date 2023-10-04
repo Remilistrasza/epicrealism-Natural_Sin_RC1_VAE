@@ -8,6 +8,7 @@ pipe = StableDiffusionPipeline.from_single_file(model,
                                                 torch_dtype=torch.float16, 
                                                 safety_checker=None)
 pipe = pipe.to("cuda")
+pipe.safety_checker = None
 
 def invoke(input_text):
     input_json = json.loads(input_text)
