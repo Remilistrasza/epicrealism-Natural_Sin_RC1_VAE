@@ -3,7 +3,7 @@ from huggingface_hub import hf_hub_download
 import torch
 import json
 
-model = hf_hub_download(repo_id="Remilistrasza/ClustroAI_LoRA", filename="ghibli_style_offset.safetensors")
+model = hf_hub_download(repo_id="Remilistrasza/epiCRealism", filename="epicrealism_naturalSinRC1VAE.safetensors")
 pipe = StableDiffusionPipeline.from_single_file(model,
                                                 torch_dtype=torch.float16, 
                                                 safety_checker=None)
